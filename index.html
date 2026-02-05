@@ -15,6 +15,17 @@
 
 <body>
 
+    <!-- PAGE LOADER -->
+<div id="page-loader">
+    <img src="image/Gima_Tech_Logo.png" alt="GIMA Tech Logo" class="loader-logo">
+
+    <div class="gears">
+        <div class="gear gear-1"></div>
+        <div class="gear gear-2"></div>
+        <div class="gear gear-3"></div>
+    </div>
+</div>
+
 	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form">
 
 		<div class="modal-form-head">
@@ -45,72 +56,30 @@
 	
 	<header class="site-header">
 
-		<div class="header-top">
-			<div class="container">
-				<div class="header-row">
-
-					<!-- Header top mobile START -->
-					<div class="header-mobile-logo">
-						<a href="#">
-							<img src="image/Gima Tech Logo.png" alt="Construction">
-						</a>
-					</div>
-
-					<div class="hamburger">
-						<span></span>
-						<span></span>
-					</div>
-					<!-- Header top mobile END -->
-
-					<div class="header-desc">Engineering, Wayleave & Infrastructure Solutions</div>
-					<div class="header-right">
-						<div class="header-info">
-							<img src="images/location.svg" alt="ул. Гагарина 5Б г. Сочи">
-							<span>Soweto</span>
-						</div>
-						<a href="tel:0673761627" class="header-info">
-							<img src="images/phone.svg" alt="+(27) 67 376 1627">
-							<span>+(27) 67 376 1627</span>
-						</a>
-
-						<div class="header-social">
-							<a href="#">
-								<img src="images/social-twitter.svg" alt="Twitter">
-							</a>
-							<a href="#">
-								<img src="images/social-facebook.svg" alt="Facebook">
-							</a>
-							<a href="#">
-								<img src="images/social-telegram.svg" alt="Telegram">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 
 		<div class="header-bottom">
-			<div class="container">
-				<div class="header-bottom-row">
-					<div class="header-logo">
-						<a href="#">
-							<img src="image/Gima Tech Logo.png" alt="GIMA Technologies">
-						</a>
-					</div>
+            <div class="header-bottom-row header-full">
+                <div class="header-inner">
+                    <div class="header-logo">
+                        <a href="#">
+                            <img src="image/Gima Tech Logo.png" alt="GIMA Technologies">
+                        </a>
+                    </div>
 
-					<nav class="header-nav">
-						<ul>
-							<li><a class="anchor-link" href="#s-about">Company</a></li>
-							<li><a class="anchor-link" href="#s-services">Solutions</a></li>
-							<li><a class="anchor-link" href="#s-gallery">Projects</a></li>
-							<li><a class="anchor-link" href="#s-team">Team</a></li>
-							<li><a class="anchor-link" href="#s-testimonials">Clients</a></li>
-							<li><a class="anchor-link" href="#s-contact">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a class="anchor-link" href="#s-about">Company</a></li>
+                            <li><a class="anchor-link" href="#s-services">Solutions</a></li>
+                            <li><a class="anchor-link" href="#s-gallery">Projects</a></li>
+                            <li><a class="anchor-link" href="#s-team">Team</a></li>
+                            <li><a class="anchor-link" href="#s-testimonials">Clients</a></li>
+                            <li><a class="anchor-link" href="#s-contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
 
 		<!-- Header mobile START -->
@@ -156,11 +125,18 @@
 
 
 	<section class="s-banner">
+        <!-- Math Symbols Background -->
+       
+      
 		
 		<div class="swiper banner-swiper">
 			
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" style="background-image: url(image/img1.png)">
+                  <div class="math-bg">
+                    <span>∑</span><span>π</span><span>√</span>
+                     <span>∞</span><span>Δ</span><span>θ</span><span>λ</span>
+                  </div>
 					<div class="banner-content">
 						<div class="banner-subtitle wow fadeIn" data-wow-delay="0.1s">Engineering • Wayleaves • Infrastructure</div>
 						<h2 class="banner-title wow fadeIn" data-wow-delay="0.2s"><strong>Engineering</strong> and Infrastructure Solutions</h2>
@@ -176,7 +152,7 @@
 </div>
 				<div class="swiper-slide video-slide">
 					<video class="bg-video" autoplay loop muted playsinline>
-        <source src="videos/vid1.m4v" type="video/mp4">
+        <source src="vid1.mp4" type="video/mp4">
     </video>
 					<div class="banner-content">
 						<div class="banner-subtitle">Fibre Optic • Telecommunications • Design</div>
@@ -221,7 +197,17 @@
 			</div>
 
 			<div class="about-right">
-				<img src="image/img9.png" alt="About GIMA Technologies" class="wow fadeIn" data-wow-delay="0.5s">
+				<video 
+                    class="about-video wow fadeIn"
+                    data-wow-delay="0.5s"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline>
+                    
+                    <source src="new/testvid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+               </video>
 			</div>
 		</div>
 
@@ -288,7 +274,7 @@
             <!-- WAYLEAVES -->
             <div class="services-item wow fadeIn" data-wow-delay="0.1s">
                 <div class="services-thumb">
-                    <img src="image/img6.png" alt="Wayleave Management">
+                    <img src="new/wayleaves.jpg" alt="Wayleave Management">
                 </div>
                 <div class="services-body">
                     <h4 class="services-title">Wayleave Management</h4>
@@ -303,7 +289,7 @@
             <!-- SURVEYING -->
             <div class="services-item wow fadeIn" data-wow-delay="0.2s">
                 <div class="services-thumb">
-                    <img src="image/img5.png" alt="Surveying Services">
+                    <img src="new/survaying.jpg" alt="Surveying Services">
                 </div>
                 <div class="services-body">
                     <h4 class="services-title">Surveying & GIS</h4>
@@ -318,7 +304,7 @@
             <!-- FIBRE & TELECOMS -->
             <div class="services-item wow fadeIn" data-wow-delay="0.3s">
                 <div class="services-thumb">
-                    <img src="image/img7.png" alt="Fibre Installation">
+                    <img src="new/fiber.jpg" alt="Fibre Installation">
                 </div>
                 <div class="services-body">
                     <h4 class="services-title">Fibre & Telecommunications</h4>
@@ -333,7 +319,7 @@
             <!-- CIVIL ENGINEERING SUPPORT -->
             <div class="services-item wow fadeIn" data-wow-delay="0.4s">
                 <div class="services-thumb">
-                    <img src="image/img8.png" alt="Civil Engineering Services">
+                    <img src="new/civil_engineering.jpg" alt="Civil Engineering Services">
                 </div>
                 <div class="services-body">
                     <h4 class="services-title">Civil Engineering Support</h4>
@@ -352,7 +338,7 @@
 
 	<section class="s-gallery" id="s-gallery">
 		<div class="container">
-			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Projects</h2>
+			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Gallery</h2>
 
 			<div class="gallery-wrap">
 				<a href="image/prj/img1.png" target="_blank" class="gallery-item wow fadeIn" data-wow-delay="0.2s">
@@ -813,5 +799,13 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.getElementById("page-loader").classList.add("hide");
+        }, 1200); // delay in ms (adjust if you want)
+    });
+</script>
 
 </html>
