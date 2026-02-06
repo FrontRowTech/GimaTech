@@ -155,16 +155,17 @@ textarea::placeholder {
 	color: #fff;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
 }
+
 .header-logo {
 	background-color: #fff;
-	padding: 15px 60px 15px 40px;
+	height: 80px;
 	display: flex;
 	align-items: center;
-	clip-path: polygon(0px 0px, 100% 0%, 82.68% 101.20%, 0px 100%);
-	 height: 80px;          /* force the container height */
-    overflow: hidden;      /* hide top/bottom whitespace */
-    display: flex;
-    align-items: center;   /* vertically center logo */
+
+	padding: 0 80px 0 20px; /* tight left edge */
+
+	clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+	overflow: hidden;
 }
 .header-logo a {
 	display: flex;
@@ -175,12 +176,12 @@ textarea::placeholder {
     object-fit: contain;
 }
 .header-nav {
-    background-color: #e72b12;
-    flex: 1;                     /* 🔥 fills remaining width */
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding-left: 40px;
+	background-color: #e72b12;
+	flex: 1;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
 }
 .header-nav ul {
 	display: flex;
@@ -947,7 +948,7 @@ textarea::placeholder {
 /* Reviews END */
 
 
-/* Partners START */
+/* Partners START 
 .s-partners {
 	padding: 30px 0;
 }
@@ -955,7 +956,7 @@ textarea::placeholder {
 	display: flex;
 	align-items: center;
 	column-gap: 70px;
-	animation: marquee 20s linear infinite; /* Измените время и тип анимации по вашему усмотрению */
+	animation: marquee 20s linear infinite; 
 }
 .partners-item img {
 	max-width: 250px;
@@ -978,7 +979,47 @@ textarea::placeholder {
 	100% {
 		transform: translateX(-100%);
 	}
-} */
+} 
+/* Partners END */
+
+/* Partners START — seamless marquee */
+.s-partners {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: partners-scroll 30s linear infinite; /* slower */
+}
+
+.partners-row {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: nowrap; /* prevent wrapping */
+}
+
+.partners-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.partners-item img {
+  height: 50px;        /* consistent height */
+  width: auto;
+  max-width: 220px;    /* stop giant logos */
+  object-fit: contain;
+}
+
+/* move exactly one full row width (because we duplicated it) */
+@keyframes partners-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 /* Partners END */
 
 
@@ -1755,11 +1796,7 @@ textarea::placeholder {
 .services-btn {
     margin-top: auto; 
 }
-.partners-item img {
-    max-height: 300px;
-    width: auto;
-    object-fit: contain;
-}
+
 .site-footer .footer-logo img {
     max-width: 140px;   /* same size as the original template */
     height: auto;
@@ -2018,14 +2055,145 @@ textarea::placeholder {
 }
 
 .header-inner {
-    max-width: 1400px;  /* wider than container */
-    margin: 0 auto;
-    padding: 0 40px;    /* clean inner spacing */
-    display: flex;
-    align-items: center;
+	display: flex;
+	width: 100%;
+	max-width: none;     /* 🔥 remove centering constraint */
+	margin: 0;           /* 🔥 remove auto margins */
 }
 
 /* Keep nav aligned */
 .header-nav {
     margin-left: auto;
+}
+
+
+/* ===============================
+   Mobile Header Base
+   =============================== */
+
+.mobile-header-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	background-color: #e72b12;
+}
+
+.mobile-logo {
+	max-height: 40px;
+}
+
+.mobile-menu-toggle {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+/* Hide menu content by default */
+.header-mobile-nav,
+.header-mobile-info,
+.header-mobile-social {
+	display: none;
+}
+
+/* When menu is open */
+.header-mobile-wrap.menu-open .header-mobile-nav,
+.header-mobile-wrap.menu-open .header-mobile-info,
+.header-mobile-wrap.menu-open .header-mobile-social {
+	display: block;
+}
+
+/* ===============================
+   Partners – Seamless Infinite Cycle
+   =============================== */
+
+/*.s-partners {
+	overflow: hidden;
+	background: #fff;
+	padding: 40px 0;
+}
+
+.partners-track {
+	display: flex;
+	width: calc(200%);
+	animation: partners-scroll 30s linear infinite;
+}
+
+.partners-row {
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+
+.partners-item {
+	flex: 0 0 auto;
+	padding: 0 40px;
+}
+
+.partners-item img {
+	max-height: 60px;
+	width: auto;
+	opacity: 1;
+	transition: transform 0.3s ease;
+}
+
+.partners-item img:hover {
+	transform: scale(1.05);
+}
+
+🔥 KEY: move exactly one row width 
+@keyframes partners-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}*/
+
+/* ===============================
+   Clients / Reviews – Equal Size Cards
+   =============================== */
+
+.reviews-item {
+    height: 100%;
+    min-height: 360px;            /* 🔥 forces equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Logo container */
+.reviews-thumb {
+    height: 180px;                 /* ⬆️ bigger logo zone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;            /* ⬅️ reduce side space */
+}
+
+/* Logos themselves */
+.reviews-thumb img {
+    max-height: 240px;
+    max-width: 330px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text area stays aligned */
+.reviews-body {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.reviews-name {
+    font-weight: 600;
+}
+
+.reviews-profi {
+    font-size: 14px;
+    opacity: 0.8;
 }

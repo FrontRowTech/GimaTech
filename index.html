@@ -13,6 +13,12 @@
 	<title>Gima Tech</title>
 </head>
 
+<script>
+	document.getElementById('mobileMenuToggle').addEventListener('click', function () {
+		document.querySelector('.header-mobile-wrap').classList.toggle('menu-open');
+	});
+</script>
+
 <body>
 
     <!-- PAGE LOADER -->
@@ -84,6 +90,10 @@
 
 		<!-- Header mobile START -->
 		<div class="header-mobile-wrap">
+            <div class="mobile-header-bar">
+              <img src="image/Gima Tech Logo.png" alt="GIMA Technologies" class="mobile-logo">
+              <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            </div>
 			<nav class="header-mobile-nav">
 				<ul>
 					<li><a class="anchor-link" href="#s-about">Company</a></li>
@@ -214,56 +224,7 @@
 	</div>
 </section>
 
-	<section class="s-numbers">
-    <div class="container">
-        <div class="numbers-row num-scroll">
-
-            <div class="numbers-left">
-                <h2 class="def-title color-white wow fadeInLeft" data-wow-delay="0.2s">GIMA Technologies <br> in Numbers</h2>
-                <div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
-                    Our experience in engineering, fibre infrastructure, wayleave management and surveying is backed by a strong record of delivery, innovation and long-term client partnerships.
-                </div>
-            </div>
-
-            <div class="numbers-right">
-
-                <div class="numbers-item">
-                    <div class="numbers-num num-js" data-count="1500">0</div>
-                    <div class="numbers-desc">
-                        Successful <br>
-                        Wayleave Applications
-                    </div>
-                </div>
-
-                <div class="numbers-item">
-                    <div class="numbers-num num-js" data-count="16">0</div>
-                    <div class="numbers-desc">
-                        Years of Engineering <br>
-                        Experience
-                    </div>
-                </div>
-
-                <div class="numbers-item">
-                    <div class="numbers-num num-js" data-count="120">0</div>
-                    <div class="numbers-desc">
-                        Completed Fibre & <br>
-                        Telecom Projects
-                    </div>
-                </div>
-
-                <div class="numbers-item">
-                    <div class="numbers-num num-js" data-count="500">0</div>
-                    <div class="numbers-desc">
-                        Survey & GIS <br>
-                        Deliverables Issued
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</section>
+	
 
 	<section class="s-services" id="s-services">
     <div class="container">
@@ -514,114 +475,221 @@
 </section>
 
 
-
-	<section class="s-team" id="s-team">
-		<div class="container">
-			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Our team</h2>
-
-			<div class="team-row">
-
-				<div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-					<div class="team-thumb">
-						<img src="image/ceo.png" alt="Ronewas Dad">
-					</div>
-					<div class="team-body">
-						<div class="team-profi">Director</div>
-						<div class="team-name">Ronewas Dad</div>
-					</div>
-				</div>
-
-				<div class="team-item wow fadeInUp" data-wow-delay="0.3s">
-					<div class="team-thumb">
-						<img src="image/manager.jpg" alt="Mr Mathuba">
-					</div>
-					<div class="team-body">
-						<div class="team-profi">Manager</div>
-						<div class="team-name">Mr Mathuba</div>
-					</div>
-				</div>
-
-				
-
-			</div>
-
-		</div>
-	</section>
-
 	<section class="s-reviews" id="s-testimonials" style="background-image: url('images/reviews-bg.png');">
     <div class="container">
         
         <h2 class="center-title color-white wow fadeIn" data-wow-delay="0.1s">
-            What Our Clients Say
+            Clients
         </h2>
 
         <div class="swiper reviews-swiper">
             <div class="swiper-wrapper">
 
-                <!-- Testimonial 1 -->
+                <!-- Client 1 -->
                 <div class="swiper-slide">
                     <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="reviews-thumb">
-                            <img src="image/Rand-Water.png" alt="Client Testimonial">
+                            <img src="Clients logos/clients logo bg/city_of_tshwane_logo.jpg" alt="City Of Tshwane">
                         </div>
                         <div class="reviews-body">
-                            <div class="reviews-name">Thabo Mkhize</div>
-                            <div class="reviews-profi">Project Manager, City of Johannesburg</div>
-                            <div class="reviews-comment">
-                                “GIMA Technologies managed our wayleave process with incredible efficiency. 
-                                Their communication, accuracy, and turnaround time exceeded our expectations.”
-                            </div>
+                            <div class="reviews-name">City Of Tshwane</div>
+                            <div class="reviews-profi">Wayleave Projects in City of Tshwane</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
+                <!-- Client 2 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/ELM-Logo.jpg" alt="Emfuleni ">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Emfuleni Local Municipality</div>
+                            <div class="reviews-profi">Projects for Emfuleni Local Municipality </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 3 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/Gauteng_RT.png" alt="Gauteng ">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Gauteng Province</div>
+                            <div class="reviews-profi">Projects for Gauteng Roads and Transport</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 4 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/huawei-logo.jpg" alt="Huawei">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Huawei</div>
+                            <div class="reviews-profi">Projects for Huawei South Africa</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 5 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/Jelani.png" alt="Jelani">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Jelani</div>
+                            <div class="reviews-profi"> Wayleave Projects for Jelani</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 6 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/kharialuwe_logo.jpg" alt="kharialuwe">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">KAG</div>
+                            <div class="reviews-profi">Projects for KAG Connect</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 7 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/Dzivha Civils.png" alt="Dzivha Civils">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Dzivha Civils</div>
+                            <div class="reviews-profi">Projects </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 8 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/WhatsApp Image 2026-02-06 at 00.47.13.jpeg" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Robert Leremi</div>
+                            <div class="reviews-profi">Projects in City of Johannesburg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 9 -->
                 <div class="swiper-slide">
                     <div class="reviews-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="reviews-thumb">
-                            <img src="image/partner-mtn.svg" alt="Client Testimonial">
+                            <img src="Clients logos/clients logo bg/Initec.png" alt="Client">
                         </div>
                         <div class="reviews-body">
-                            <div class="reviews-name">Zanele Mabaso</div>
-                            <div class="reviews-profi">Technical Lead, MTN Fibre Division</div>
-                            <div class="reviews-comment">
-                                “Their fibre planning and GIS mapping accuracy allowed us to execute our rollout 
-                                smoothly. GIMA is reliable and truly understands telecommunications infrastructure.”
-                            </div>
+                            <div class="reviews-name">Initec</div>
+                            <div class="reviews-profi">Fiber Optic Projects</div>
+                            
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
+                <!-- Client 10 -->
                 <div class="swiper-slide">
                     <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="reviews-thumb">
-                            <img src="image/Gima Tech Logo.png" alt="Client Testimonial">
+                            <img src="Clients logos/clients logo bg/LinkAfrica-logo.webp" alt="Client">
                         </div>
                         <div class="reviews-body">
-                            <div class="reviews-name">Daniel Smith</div>
-                            <div class="reviews-profi">Director, UrbanCore Civil Engineering</div>
-                            <div class="reviews-comment">
-                                “Their engineering support team is exceptional. From site surveys to as-built 
-                                documentation, everything was handled with precision and professionalism.”
-                            </div>
+                            <div class="reviews-name">Link Africa</div>
+                            <div class="reviews-profi">Projects for Link Africa</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 4 -->
+                <!-- Client 12 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/linmox.png" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Linmox</div>
+                            <div class="reviews-profi">Projects for Linmox</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 13 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/magalist_water.png" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">magalist water</div>
+                            <div class="reviews-profi">Projects for magalist water</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Client 14 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/MCR.png" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Media Capital (pty) LTD</div>
+                            <div class="reviews-profi">Projects for Media Capital</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 14 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/rivoni.png" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">Rivoni Iconic Outdoor</div>
+                            <div class="reviews-profi">Projects for Iconic Outdoor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 15 -->
+                <div class="swiper-slide">
+                    <div class="reviews-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="reviews-thumb">
+                            <img src="Clients logos/clients logo bg/St.png" alt="Client">
+                        </div>
+                        <div class="reviews-body">
+                            <div class="reviews-name">ST</div>
+                            <div class="reviews-profi">Projects for ST</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client 11 -->
                 <div class="swiper-slide">
                     <div class="reviews-item wow fadeInUp" data-wow-delay="0.5s">
                         <div class="reviews-thumb">
-                            <img src="image/front_row_tech_logo.png" alt="Client Testimonial">
+                            <img src="Clients logos/clients logo bg/SANRAL.png" alt="Client">
                         </div>
                         <div class="reviews-body">
-                            <div class="reviews-name">Sibusiso Ngwenya</div>
-                            <div class="reviews-profi">CEO, Innovate Networks</div>
-                            <div class="reviews-comment">
-                                “GIMA's professionalism stands out. Their telecoms trench inspections 
-                                and compliance reporting saved us time and avoided costly delays.”
-                            </div>
+                            <div class="reviews-name">SANRAL</div>
+                            <div class="reviews-profi">Projects for SANRAL</div>
                         </div>
                     </div>
                 </div>
@@ -635,14 +703,93 @@
 
 
 
+
+
+<section class="s-numbers">
+    <div class="container">
+        <div class="numbers-row num-scroll">
+
+            <div class="numbers-left">
+                <h2 class="def-title color-white wow fadeInLeft" data-wow-delay="0.2s">GIMA Technologies <br> in Numbers</h2>
+                <div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
+                    Our experience in engineering, fibre infrastructure, wayleave management and surveying is backed by a strong record of delivery, innovation and long-term client partnerships.
+                </div>
+            </div>
+
+            <div class="numbers-right">
+
+                <div class="numbers-item">
+                    <div class="numbers-num num-js" data-count="2157">0</div>
+                    <div class="numbers-desc">
+                        Successful <br>
+                        Wayleave Applications
+                    </div>
+                </div>
+
+                <div class="numbers-item">
+                    <div class="numbers-num num-js" data-count="16">0</div>
+                    <div class="numbers-desc">
+                        Years of Engineering <br>
+                        Experience
+                    </div>
+                </div>
+
+                <div class="numbers-item">
+                    <div class="numbers-num num-js" data-count="522">0</div>
+                    <div class="numbers-desc">
+                        Civil Engineering <br>
+                        Draughting Projects
+                    </div>
+                </div>
+
+                <div class="numbers-item">
+                    <div class="numbers-num num-js" data-count="687">0</div>
+                    <div class="numbers-desc">
+                        Survey & Services <br>
+                        Detection Projects
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
 	<div class="s-partners" id="s-partners">
+	<div class="partners-track">
 		<div class="partners-row">
 			<div class="partners-item"><img src="image/partner-mtn-group.svg" alt="MTN"></div>
-			<div class="partners-item"><img src="image/front_row_tech_logo.png" alt="Front Row Tech"></div>
-			<div class="partners-item"><img src="image/Gima_Tech_Logo.png" alt="Gima Tech"></div>
+			<div class="partners-item"><img src="Clients logos/Huawei-Logo.png" alt="Huawei"></div>
+			<div class="partners-item"><img src="Clients logos/LinkAfrica03.png" alt="Link Africa"></div>
 			<div class="partners-item"><img src="image/Rand-Water.png" alt="Rand Water"></div>
+			<div class="partners-item"><img src="Clients logos/contttttt-1.png" alt="Tshwane"></div>
+			<div class="partners-item"><img src="Clients logos/emfuleni.png" alt="Emfuleni"></div>
+			<div class="partners-item"><img src="Clients logos/gautengRT-removebg-preview.png" alt="Gauteng"></div>
+			<div class="partners-item"><img src="Clients logos/KAG_Connect-removebg-preview.png" alt="Kag Connect"></div>
+			<div class="partners-item"><img src="Clients logos/magalist_water-removebg-preview.png" alt="Magalist"></div>
+			<div class="partners-item"><img src="Clients logos/Rivoni-Ready-Plants-and-Trees-Logo.png" alt="Rivoni"></div>
+			<div class="partners-item"><img src="Clients logos/SANRAL-removebg-preview.png" alt="SANRAL"></div>
+			<div class="partners-item"><img src="Clients logos/Initec-removebg-preview.png" alt="Initec"></div>
+		</div>
+
+		<!-- duplicate once for seamless loop -->
+		<div class="partners-row" aria-hidden="true">
+			<div class="partners-item"><img src="image/partner-mtn-group.svg" alt="MTN"></div>
+			<div class="partners-item"><img src="Clients logos/Huawei-Logo.png" alt="Huawei"></div>
+			<div class="partners-item"><img src="Clients logos/LinkAfrica03.png" alt="Link Africa"></div>
+			<div class="partners-item"><img src="image/Rand-Water.png" alt="Rand Water"></div>
+			<div class="partners-item"><img src="Clients logos/contttttt-1.png" alt="Tshwane"></div>
+			<div class="partners-item"><img src="Clients logos/emfuleni.png" alt="Emfuleni"></div>
+			<div class="partners-item"><img src="Clients logos/gautengRT-removebg-preview.png" alt="Gauteng"></div>
+			<div class="partners-item"><img src="Clients logos/KAG_Connect-removebg-preview.png" alt="Kag Connect"></div>
+			<div class="partners-item"><img src="Clients logos/magalist_water-removebg-preview.png" alt="Magalist"></div>
+			<div class="partners-item"><img src="Clients logos/Rivoni-Ready-Plants-and-Trees-Logo.png" alt="Rivoni"></div>
+			<div class="partners-item"><img src="Clients logos/SANRAL-removebg-preview.png" alt="SANRAL"></div>
+			<div class="partners-item"><img src="Clients logos/Initec-removebg-preview.png" alt="Initec"></div>
 		</div>
 	</div>
+</div>
 
 	<section class="s-form" id="s-contact">
     <div class="container">

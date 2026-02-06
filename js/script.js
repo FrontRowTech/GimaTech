@@ -187,25 +187,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Reviews START
 	const reviewsSwiper = new Swiper('.reviews-swiper', {
-		speed: 1000,
-		spaceBetween: 20,
-		pagination: {
-			el: '.reviews-swiper .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-			},
-			575: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 3,
-			},
-		  }
-	});
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    autoplay: {
+        delay: 2500,          // ⏱️ 3 seconds
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    }
+});
 	// Reviews END
 
 	
