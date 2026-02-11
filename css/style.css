@@ -2197,3 +2197,238 @@ textarea::placeholder {
     font-size: 14px;
     opacity: 0.8;
 }
+
+/* ===============================
+   Service Page Styling
+=============================== */
+
+.service-hero {
+    padding: 120px 0;
+    background: #f5f5f5;
+}
+
+.service-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.service-hero-text h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.service-hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.service-hero-image img {
+    max-width: 100%;
+}
+
+.service-overview {
+    padding: 80px 0;
+}
+
+.service-overview p {
+    max-width: 800px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.service-features {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.feature-item h4 {
+    margin-bottom: 10px;
+}
+
+.service-process {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.process-step span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e72b12;
+}
+
+.service-usecases {
+    padding: 80px 0;
+}
+
+.usecase-list {
+    margin-top: 30px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.usecase-list li {
+    margin-bottom: 10px;
+}
+
+.service-cta {
+    padding: 80px 0;
+    background: #e72b12;
+    color: #fff;
+    text-align: center;
+}
+
+.service-cta h2 {
+    margin-bottom: 15px;
+}
+
+.service-cta p {
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   Buttons (reuse if not already defined)
+=============================== */
+
+.btn-primary {
+    background: #e72b12;
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #e72b12;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media (max-width: 768px) {
+    .service-hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .service-hero {
+        padding: 80px 0;
+    }
+
+    .service-hero-text h1 {
+        font-size: 36px;
+    }
+}
+
+/* ===============================
+   Wayleave Projects Slider
+=============================== */
+
+.service-projects {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.projects-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Card */
+.project-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* PDF preview */
+.project-preview {
+    height: 260px;
+    background: #f0f0f0;
+    pointer-events: none; /* click passes to card */
+}
+
+.project-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Text */
+.project-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-body h4 {
+    margin-bottom: 8px;
+}
+
+.project-body p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Swiper spacing */
+.wayleave-projects-swiper .swiper-slide {
+    height: auto;
+}
+
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#page-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+

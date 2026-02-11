@@ -1,4 +1,16 @@
+// ===============================
+// Loader FIX (safe for PDFs)
+// ===============================
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+	const loader = document.getElementById('page-loader');
+    if (loader) {
+        setTimeout(function () {
+            loader.classList.add('is-hidden');
+        }, 600); // adjust timing if needed
+    }
 
 	new WOW().init();
 
@@ -86,18 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrollHeader();
 	showArrowUp();
 
-	$('.anchor-link').on('click', function () {
-	    let href = $(this).attr('href');
+	$('.anchor-link').on('click', function (e) {
+    const href = $(this).attr('href');
 
-	    $('html, body').animate({
-	        scrollTop: $(href).offset().top
-	    }, {
-	        duration: 700,
-	    });
-		$('.header-mobile-wrap').slideUp(500);
-		$('.hamburger').removeClass('is-active');
-	    return false;
-	});
+    // Only handle real anchors
+    if (!href.startsWith('#')) return;
+
+    e.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, 700);
+});
 
 	$('.go-up').on('click', function () {
 	    $('html, body').animate({
@@ -215,6 +227,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 	// Reviews END
 
-	
 
 })
