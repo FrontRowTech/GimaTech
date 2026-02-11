@@ -2431,4 +2431,13 @@ textarea::placeholder {
 }
 
 
+.services-body {
+    padding: 15px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
+.services-body .def-btn {
+    margin-top: auto;
+}

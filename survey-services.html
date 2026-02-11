@@ -12,8 +12,17 @@
 
 <body>
     <!-- PAGE LOADER -- <div id="page-loader"> <img src="image/Gima_Tech_Logo.png" alt="GIMA Tech Logo" class="loader-logo"> <div class="gears"> <div class="gear gear-1"></div> <div class="gear gear-2"></div> <div class="gear gear-3"></div> </div> </div> -->
-    <!-- ========================= HEADER (reuse your main header) ========================= -->
-    <!-- Include your existing header here -->
+        <!-- PAGE LOADER -->
+<div id="page-loader">
+    <img src="image/Gima_Tech_Logo.png" alt="GIMA Tech Logo" class="loader-logo">
+
+    <div class="gears">
+        <div class="gear gear-1"></div>
+        <div class="gear gear-2"></div>
+        <div class="gear gear-3"></div>
+    </div>
+</div>
+   
     <header class="site-header">
         <div class="header-bottom">
             <div class="header-bottom-row header-full">
@@ -237,5 +246,13 @@
         </div>
     </footer>
 </body>
+
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.getElementById("page-loader").classList.add("hide");
+        }, 1200); // delay in ms (adjust if you want)
+    });
+</script>
 
 </html>
