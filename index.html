@@ -14,8 +14,22 @@
 </head>
 
 <script>
-	document.getElementById('mobileMenuToggle').addEventListener('click', function () {
-		document.querySelector('.header-mobile-wrap').classList.toggle('menu-open');
+	// Mobile menu toggle
+	document.addEventListener('DOMContentLoaded', function() {
+		var mobileToggle = document.getElementById('mobileMenuToggle');
+		if (mobileToggle) {
+			mobileToggle.addEventListener('click', function () {
+				document.querySelector('.header-mobile-wrap').classList.toggle('menu-open');
+			});
+		}
+
+		// Close mobile menu when clicking on anchor links
+		var anchorLinks = document.querySelectorAll('.header-mobile-nav a.anchor-link');
+		anchorLinks.forEach(function(link) {
+			link.addEventListener('click', function() {
+				document.querySelector('.header-mobile-wrap').classList.remove('menu-open');
+			});
+		});
 	});
 </script>
 
@@ -78,7 +92,6 @@
                             <li><a class="anchor-link" href="#s-about">Company</a></li>
                             <li><a class="anchor-link" href="#s-services">Solutions</a></li>
                             <li><a class="anchor-link" href="#s-gallery">Projects</a></li>
-                            <li><a class="anchor-link" href="#s-team">Team</a></li>
                             <li><a class="anchor-link" href="#s-testimonials">Clients</a></li>
                             <li><a class="anchor-link" href="#s-contact">Contact</a></li>
                         </ul>
@@ -99,7 +112,6 @@
 					<li><a class="anchor-link" href="#s-about">Company</a></li>
 					<li><a class="anchor-link" href="#s-services">Solutions<</a></li>
 					<li><a class="anchor-link" href="#s-gallery">Projects</a></li>
-					<li><a class="anchor-link" href="#s-team">Team</a></li>
 					<li><a class="anchor-link" href="#s-testimonials">Clients</a></li>
 					<li><a class="anchor-link" href="#s-contact">Contact</a></li>
 				</ul>
@@ -951,8 +963,15 @@
         
         <div class="footer-copyright">
             <div class="copyright-text">
-                © 2009 GIMA Technologies Consulting. All rights reserved.
-            </div>
+    © 2009 GIMA Technologies Consulting. All rights reserved.
+    <br>
+    <span class="built-by">
+        Built by 
+        <a href="https://frontrowtech.co.za" target="_blank" rel="noopener">
+            Front Row Tech
+        </a>
+    </span>
+</div>
         </div>
 
     </div>

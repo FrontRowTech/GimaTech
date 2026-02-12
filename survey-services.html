@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="css/service-page.css">
 </head>
 
+<script>
+	// Mobile menu toggle
+	document.addEventListener('DOMContentLoaded', function() {
+		var mobileToggle = document.getElementById('mobileMenuToggle');
+		if (mobileToggle) {
+			mobileToggle.addEventListener('click', function () {
+				document.querySelector('.header-mobile-wrap').classList.toggle('menu-open');
+			});
+		}
+
+		// Close mobile menu when clicking on anchor links
+		var anchorLinks = document.querySelectorAll('.header-mobile-nav a.anchor-link');
+		anchorLinks.forEach(function(link) {
+			link.addEventListener('click', function() {
+				document.querySelector('.header-mobile-wrap').classList.remove('menu-open');
+			});
+		});
+	});
+</script>
+
 <body>
     <!-- PAGE LOADER -- <div id="page-loader"> <img src="image/Gima_Tech_Logo.png" alt="GIMA Tech Logo" class="loader-logo"> <div class="gears"> <div class="gear gear-1"></div> <div class="gear gear-2"></div> <div class="gear gear-3"></div> </div> </div> -->
         <!-- PAGE LOADER -->
@@ -34,26 +54,24 @@
                             <li><a href="index.html#s-about">Company</a></li>
                             <li><a href="index.html#s-services">Solutions</a></li>
                             <li><a href="index.html#s-gallery">Projects</a></li>
-                            <li><a href="index.html#s-team">Team</a></li>
                             <li><a href="index.html#s-testimonials">Clients</a></li>
                             <li><a href="index.html#s-contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </div> <!-- Header mobile START -->
+        </div> 
+        <!-- Header mobile START -->
         <div class="header-mobile-wrap">
             <div class="mobile-header-bar"> <img src="image/Gima Tech Logo.png" alt="GIMA Technologies"
                     class="mobile-logo"> <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button> </div>
             <nav class="header-mobile-nav">
                 <ul>
-                    <li><a class="anchor-link" href="#s-about">Company</a></li>
-                    <li><a class="anchor-link" href="#s-services">Solutions<< /a>
-                    </li>
-                    <li><a class="anchor-link" href="#s-gallery">Projects</a></li>
-                    <li><a class="anchor-link" href="#s-team">Team</a></li>
-                    <li><a class="anchor-link" href="#s-testimonials">Clients</a></li>
-                    <li><a class="anchor-link" href="#s-contact">Contact</a></li>
+                    <li><a href="index.html#s-about">Company</a></li>
+                    <li><a href="index.html#s-services">Solutions</a></li>
+                    <li><a href="index.html#s-gallery">Projects</a></li>
+                    <li><a href="index.html#s-testimonials">Clients</a></li>
+                    <li><a href="index.html#s-contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-mobile-info"> <img src="images/location.svg" alt="ул. Гагарина 5Б г. Сочи"> <span>Greenbe
@@ -63,15 +81,16 @@
                     href="#"> <img src="images/social-vk.svg" alt="Вконтакте"> </a> <a href="#"> <img
                         src="images/social-facebook.svg" alt="Facebook"> </a> <a href="#"> <img
                         src="images/social-telegram.svg" alt="Telegram"> </a> </div>
-        </div> <!-- Header mobile END -->
+        </div>
+         <!-- Header mobile END -->
     </header> <!-- ========================= SERVICE HERO ========================= -->
     <section class="service-hero">
         <div class="container service-hero-inner">
             <div class="service-hero-text">
                 <h1>Surveying & GIS Services</h1>
                 <p> We deliver accurate surveying, spatial data collection, and GIS solutions to support infrastructure
-                    planning, design, and construction projects across South Africa. </p> <a href="contact.html"
-                    class="btn-primary">Request a Quote</a>
+                    planning, design, and construction projects across South Africa. </p> 
+                    <a href="index.html#s-contact" class="btn-primary">Request a Quote</a>
             </div>
             <div class="service-hero-image"> <img src="service_img/survay_img.jpg" alt="Surveying and GIS Services">
             </div>
@@ -185,8 +204,8 @@
     <section class="service-cta">
         <div class="container">
             <h2>Need Accurate Surveying or GIS Data?</h2>
-            <p> Speak to our experienced team about professional surveying and GIS solutions for your project. </p> <a
-                href="contact.html" class="btn-secondary">Contact Us</a>
+            <p> Speak to our experienced team about professional surveying and GIS solutions for your project. </p> 
+            <a href="index.html#s-contact" class="btn-secondary">Contact Us</a>
         </div>
     </section>
     <footer class="site-footer">
@@ -204,11 +223,11 @@
                     <nav class="footer-nav">
                         <h5 class="footer-title">Our Services</h5>
                         <ul>
-                            <li><a href="#s-services">Wayleave Management</a></li>
-                            <li><a href="#s-services">Fibre & Telecommunications</a></li>
-                            <li><a href="#s-services">Surveying & GIS</a></li>
-                            <li><a href="#s-services">Civil Engineering Support</a></li>
-                            <li><a href="#s-services">Technical Consulting</a></li>
+                        <li><a href="index.html#s-services">Wayleave Management</a></li>
+                        <li><a href="index.html#s-services">Fibre & Telecommunications</a></li>
+                        <li><a href="index.html#s-services">Surveying & GIS</a></li>
+                        <li><a href="index.html#s-services">Civil Engineering Support</a></li>
+                        <li><a href="index.html#s-services">Technical Consulting</a></li>
                         </ul>
                     </nav> <!-- Operating Hours -->
                     <div class="footer-nav">
@@ -241,7 +260,16 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="copyright-text"> © 2009 GIMA Technologies Consulting. All rights reserved. </div>
+               <div class="copyright-text">
+    © 2009 GIMA Technologies Consulting. All rights reserved.
+    <br>
+    <span class="built-by">
+        Built by 
+        <a href="https://frontrowtech.co.za" target="_blank" rel="noopener">
+            Front Row Tech
+        </a>
+    </span>
+</div>
             </div>
         </div>
     </footer>

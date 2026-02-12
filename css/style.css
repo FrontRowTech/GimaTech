@@ -414,17 +414,36 @@ textarea::placeholder {
 
 
 /* Services START */
+/* Services START */
 .s-services {
-	padding: 100px 0;
+    padding: 100px 0;
 }
+
 .services-row {
-	display: flex;
-	column-gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 35px;
 }
+
 .services-item {
-	box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.15);
-	width: 33.3%;
-	height: 100%;
+    box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .services-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .services-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 .services-thumb {
     width: 100%;
@@ -455,6 +474,8 @@ textarea::placeholder {
 	text-align: center;
 	padding: 12px 45px;
 }
+
+
 
 .modal-form {
 	background-color: #fff;
@@ -1563,13 +1584,15 @@ textarea::placeholder {
 	.services-btn {
 		font-size: 12px;
 	}
-	.services-row {
-		flex-wrap: wrap;
-		row-gap: 20px;
-	}
-	.services-item {
-		width: calc(50% - 10px);
-	}
+	/* Services 768 START */
+.services-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.services-item {
+    width: 100%;
+}
+/* Services 768 END */
 	/* Services 768 END */
 
 	/* Gallery 768 START */
@@ -1677,13 +1700,14 @@ textarea::placeholder {
 	/* About 575 END */
 
 	/* Services 575 START */
-	.services-row {
-		justify-content: center;
-	}
-	.services-item {
-		width: 250px;
-	}
-	/* Services 575 END */
+.services-row {
+    grid-template-columns: 1fr;
+    justify-content: unset;
+}
+.services-item {
+    width: 100%;
+}
+/* Services 575 END */
 
 	/* Gallery 575 START */
 	.s-gallery {
@@ -1770,31 +1794,21 @@ textarea::placeholder {
     position: relative;
     z-index: 2;
 }
-/* Make the entire row use equal-height flex columns */
-.services-row {
-    display: flex;
-    align-items: stretch;
-    gap: 30px; /* optional spacing */
-}
-
-/* Each service card expands evenly */
-.services-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* allow equal width and height */
-    height: auto;
-}
-
-/* Force service-body (text section) to stretch */
 .services-body {
-    flex: 1;
+    padding: 15px 20px 30px 20px;
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+.services-body .def-btn {
+    margin-top: auto;
 }
 
-/* Push the button to the bottom */
-.services-btn {
-    margin-top: auto; 
+@media (max-width: 768px) {
+    .s-services .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .site-footer .footer-logo img {
@@ -2091,19 +2105,7 @@ textarea::placeholder {
 	cursor: pointer;
 }
 
-/* Hide menu content by default */
-.header-mobile-nav,
-.header-mobile-info,
-.header-mobile-social {
-	display: none;
-}
 
-/* When menu is open */
-.header-mobile-wrap.menu-open .header-mobile-nav,
-.header-mobile-wrap.menu-open .header-mobile-info,
-.header-mobile-wrap.menu-open .header-mobile-social {
-	display: block;
-}
 
 /* ===============================
    Partners – Seamless Infinite Cycle
@@ -2440,4 +2442,167 @@ textarea::placeholder {
 
 .services-body .def-btn {
     margin-top: auto;
+}
+
+.built-by {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.built-by a {
+    color: #e72b12; /* match your brand red */
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.built-by a:hover {
+    opacity: 0.7;
+}
+
+/* ===============================
+   Mobile Header - Full Styling
+=============================== */
+
+.header-mobile-wrap {
+    display: none; /* Hidden by default on desktop */
+}
+
+.mobile-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+}
+
+.mobile-logo {
+    max-height: 50px;
+    width: auto;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #e72b12;
+    cursor: pointer;
+    padding: 5px 10px;
+    line-height: 1;
+}
+
+.header-mobile-nav {
+    background-color: #e72b12;
+    padding: 20px 0;
+}
+
+.header-mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-mobile-nav ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-mobile-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.header-mobile-nav ul li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.header-mobile-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.header-mobile-info img {
+    margin-right: 10px;
+    max-width: 20px;
+}
+
+.header-mobile-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.header-mobile-social a img {
+    max-width: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.header-mobile-social a:hover img {
+    opacity: 0.7;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    /* Hide desktop header */
+    .header-bottom {
+        display: none;
+    }
+
+    /* Show mobile header */
+    .header-mobile-wrap {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: #fff;
+    }
+
+    .mobile-header-bar {
+        position: relative;
+    }
+
+    /* Hide menu content by default */
+    .header-mobile-nav,
+    .header-mobile-info,
+    .header-mobile-social {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    /* When menu is open */
+    .header-mobile-wrap.menu-open .header-mobile-nav,
+    .header-mobile-wrap.menu-open .header-mobile-info,
+    .header-mobile-wrap.menu-open .header-mobile-social {
+        display: block;
+        opacity: 1;
+        max-height: 1000px;
+    }
+
+    /* Adjust banner margin for mobile header */
+    .s-banner {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-mobile-wrap {
+        display: none !important;
+    }
+}
+
+.service-hero {
+    margin-top: 80px;
 }
